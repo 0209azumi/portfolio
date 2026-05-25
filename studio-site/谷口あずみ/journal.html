@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>haku.</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/journal.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Poppins:wght@100;200;300;400&display=swap" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<script src="common.js"></script>
+
+</head>
+
+<body>
+    <div class="scroll-progress" aria-hidden="true"></div>
+
+     <!-- ここからheader -->
+     <header>
+        <a class="top-logo" href="./index.html">haku.</a> 
+        <button class="menu-btn" id="js-menu" aria-label="menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        
+        <nav>
+            <ul class="nav">
+                <li><a href="./about.html">About</a></li>
+            <li><a href="./works.html">Works</a></li>
+            <li><a href="./journal.html">Journal</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+        </ul>
+        </nav>
+    </header>
+    
+<!-- ここまでheder -->
+<div class="cursor-follow"></div>
+
+<!-- ここからmain -->
+<h1>Journal</h1>
+<h2 class="fadein">光、影、余白の観察記録</h2>
+<p class="journal-text fadein">日々の制作と観察の中で見つけた<br>
+    静かな気づきをまとめています。</p>
+
+    <ul class="journal-list">
+        <li class="fadein journal-item"
+            data-title="Soft Morning Light"
+            data-date="2025.12.20"
+            data-img="./img/journal/journal01_open.jpg"
+            data-body="<span class='lead'>朝の光が見せる“柔らかい立ち上がり”について。</span><br>朝の光は、空間に触れる前に一度ためらうように、ゆっくりと入り込んでくる。強い輪郭をつくらず、影もまだ曖昧なまま、ただ静かに明るさだけを置いていく。<br>目が完全に覚めきらない時間帯、壁や床は色を持たず、光そのものを受け止めているように見える。昼の光とは違い、主張がなく、空間の形を決めつけない。<br>この柔らかな明るさの中では、物の配置や距離感も少し緩む。整えようとしなくても、自然と視線が落ち着く場所が生まれる。<br>朝の光は、空間の一日を決める。何かを加える前に、まず静かな基準をつくる存在だ。">
+          <a class="journal-top" href="#">
+            <img src="./img/journal/journal01.png" alt="Soft Morning Light">
+            <dl>
+              <dt>Soft Morning Light</dt>
+              <dd>2025.12.20</dd>
+              <dd>朝の光が見せる”柔らかい立ち上がり”について。</dd>
+            </dl>
+          </a>
+        </li>
+          <li class="fadein journal-item"
+          data-title="Concrete Silence"
+          data-date="2025.12.01"
+          data-img="./img/journal/journal02.png"
+          data-body="<span class='lead'>コンクリートの表情が静けさをつくる仕組み。</span><br>コンクリートは冷たく、無機質な素材だと思われがちだ。けれど近づいて見ると、表面には必ず揺らぎがある。<br>小さな凹凸、乾くまでの時間が残した跡、わずかな色のムラ。均一に見える面ほど、時間の痕跡を多く抱えている。<br>触れたときの温度や、音を吸い込むような静けさが、空間全体を落ち着かせる。何も語らない素材だからこそ、周囲の光や影を受け入れる余白がある。<br>主張しない背景は、長く使われることで完成していく。コンクリートの静けさは、時間と共に深まっていくものだ。">
+        <a href="#">
+            <img src="./img/journal/journal02.png" alt="Concrete Silence">
+            <dl>
+                <dt>Concrete Silence</dt>
+                <dd>2025.12.01</dd>
+                <dd>コンクリートの表情が静けさをつくる仕組み。</dd>
+            </dl>
+        </a>
+    </li>
+    <li class="fadein journal-item"            
+    data-title="Shadow Line"
+    data-date="2025.11.17"
+    data-img="./img/journal/journal03.png"
+    data-body="<span class='lead'>光と影の境界線の観察記録。</span><br>光と影の境界は、線のように見えて、実際には線ではない。はっきりと分かれているようで、どこか必ず曖昧さを含んでいる。<br>少し視点を変えるだけで、その輪郭は簡単に崩れてしまう。影は固定された形ではなく、光の状態によって常に変化している。<br>その不確かさが、空間に奥行きを生む。影があることで光が際立ち、光があることで影の深さが見えてくる。<br>境界を明確にしすぎないこと。その間に生まれる揺らぎこそが、空間を豊かにしている。">
+  <a href="#">
+
+            <img src="./img/journal/journal03.png" alt="Shadow Line">
+            <dl>
+                <dt>Shadow Line</dt>
+                <dd>2025.11.17</dd>
+                <dd>光と影の境界線の観察記録。</dd>
+            </dl>
+        </a>
+    </li>
+    <li class="fadein journal-item"
+    data-title="Quiet Leaf"
+    data-date="2025.11.07"
+    data-img="./img/journal/journal04.png"
+    data-body="<span class='lead'>植物が影の中で生む呼吸について。</span><br>植物は、空間の中で静かに存在している。強く主張することもなく、ただ光と影の間に身を置いている。<br>葉が重なって生まれる影は、人の手では計算できないリズムを持つ。規則的ではないのに、不思議と落ち着く配置だ。<br>光を受けすぎることも、影に隠れすぎることもない。その曖昧な立ち位置が、空間に呼吸を与えている。<br>自然がつくるバランスには、無理がない。配置を整えすぎないことの大切さを、静かに教えてくれる存在だ。">
+  <a href="#">
+    <img src="./img/journal/journal04.png" alt="Quiet Leaf">
+            <dl>
+                <dt>Quiet Leaf</dt>
+                <dd>2025.11.07</dd>
+                <dd>植物が影の中で生む呼吸について。</dd>
+            </dl>
+        </a>
+    </li>
+    <li class="fadein journal-item"
+    data-title="White Moments"
+    data-date="2025.10.10"
+    data-img="./img/journal/journal05.png"
+    data-body="<span class='lead'>”何も起きていない時間”だけが持つ美しさについて。</span><br>何も起きていない時間は、意識しないとすぐに通り過ぎてしまう。人のいない空間、音のない午後。<br>その白い時間の中で、空間は最も正直な表情を見せる。飾りも演出もない状態だからこそ、形や距離がはっきりと感じられる。<br>余白は、何かを足すための場所ではない。何も起こさない選択を重ねた結果として生まれる。<br>静かな瞬間に目を向けることで、空間が持つ本来の強さに気づくことができる。">
+  <a href="#">
+
+            <img src="./img/journal/journal05.png" alt="White Moments">
+            <dl>
+                <dt>White Moments</dt>
+                <dd>2025.10.10</dd>
+                <dd>”何も起きていない時間”だけが持つ美しさについて。</dd>
+            </dl>
+        </a>
+    </li>
+    <li class="fadein journal-item"
+    data-title="Unseen Blance"
+    data-date="2025.09.29"
+    data-img="./img/journal/journal06.png"
+    data-body="<span class='lead'>線を引かない部分がつくる、見えないバランスについて。</span><br>整えすぎないことで保たれるバランスがある。線を引かない配置、決めきらない余白。 <br>一見すると曖昧で不安定に見えるが、空間全体としては自然な均衡を保っている。 <br>すべてを揃えないことで、視線が自由に動く余地が生まれる。見る人それぞれが、心地よい位置を見つけられる。 <br>何もしない判断は、最も難しい。けれどその静かな選択が、空間に深い安定感を与えている。">
+  <a href="#">
+    <img src="./img/journal/journal06.png" alt="Unseen Blance">
+            <dl>
+                <dt>Unseen Blance</dt>
+                <dd>2025.09.29</dd>
+                <dd>線を引かない部分がつくる、見えないバランスについて。</dd>
+            </dl>
+        </a>
+    </li>
+    <li class="fadein journal-item"
+    data-title="Soft Falling Light"
+    data-date="2025.09.12"
+    data-img="./img/journal/journal07.png"
+    data-body="<span class='lead'>光がゆっくり床をなぞるときの、静かな変化のこと。</span><br>床に落ちる光は、時間と共に静かに移動していく。気づかないうちに形を変え、位置を変え、消えていく。<br>そこに特別な意味はない。<br>ただ、光がそこに在り、通り過ぎているだけだ。<br>その変化を眺めていると、空間が固定されたものではないと感じる。光によって、同じ場所でも全く違う表情を見せる。<br>移ろいを受け入れることで、空間は少しだけ生きているように見えてくる。">
+  <a href="#">
+    <img src="./img/journal/journal07.png" alt="Soft Falling Light">
+            <dl>
+                <dt>Soft Falling Light</dt>
+                <dd>2025.09.12</dd>
+                <dd>光がゆっくり床をなぞるときの、静かな変化のこと。</dd>
+            </dl>
+        </a>
+    </li>
+</ul>
+
+<!-- ここまでmain -->
+<!-- ここからfooter -->
+<footer>
+    <div class="footer-in">
+    <div class="footer-flex">
+    <div class="footer-left">
+    <a href="./about.html">About"haku."<span class="footer-about">haku.について</span></a>
+    <a href="./works.html">Works<span class="footer-works">作品集</span></a>
+    <a href="./journal.html">Journal<span class="footer-journal">日記・コラム</span></a>
+    </div>
+    <div class="footer-right">
+    <a href="./contact.html">Contact<span class="fotter-contact">お問い合わせ</span></a>
+    <a href="#"><span>Privacy policy</span></a>
+    </div>
+</div>
+<div class="footer-logo">
+<a class="footer-title" href="./index.html">haku.</a></div>
+<div class="copyright"> <small>©haku.2025</small></div>
+</div>
+</footer>
+
+<!-- ここまでfooter -->
+
+<div class="journal-modal" aria-hidden="true">
+    <div class="journal-modal__bg"></div>
+  
+    <div class="journal-modal__panel" role="dialog" aria-modal="true">
+      <button class="journal-modal__close" type="button" aria-label="閉じる">
+        ← Back
+      </button>
+  
+      <img src="dummy.png" class="journal-modal__img" alt="">
+      <p class="journal-modal__date" hidden></p>
+      <h3 class="journal-modal__title" hidden></h3>
+      <div class="journal-modal__body" hidden></div>
+    </div>
+  </div>
+  
+
+
+<a href="#" class="pagetop" id="js-pagetop">TOP</a>
+
+<script>
+  $(function(){
+  const $modal = $('.journal-modal');
+  if(!$modal.length) return;
+
+  const $panel = $('.journal-modal__panel');
+  const $img  = $('.journal-modal__img');
+  const $date = $('.journal-modal__date');
+  const $title= $('.journal-modal__title');
+  const $body = $('.journal-modal__body');
+
+  function openModal($item){
+  $panel.scrollTop(0);
+
+  $img.attr('src', $item.data('img'));
+
+  $date.text($item.data('date')).prop('hidden', false);
+  $title.text($item.data('title')).prop('hidden', false);
+  $body.html($item.data('body')).prop('hidden', false);
+
+  $modal.addClass('is-open').attr('aria-hidden','false');
+  $('body').css('overflow','hidden');
+
+    // 開いた直後にも念のため
+    requestAnimationFrame(() => $panel.scrollTop(0));
+
+    // 画像ロード後にもう一回（これが効く）
+    $img.off('load.jreset').on('load.jreset', function(){
+      $panel.scrollTop(0);
+    });
+  }
+
+  function closeModal(){
+    $modal.removeClass('is-open').attr('aria-hidden','true');
+    $('body').css('overflow','');
+
+    // 閉じた時もリセットしておくと確実
+    $panel.scrollTop(0);
+  }
+
+  $('.journal-item a').on('click', function(e){
+    e.preventDefault();
+    openModal($(this).closest('.journal-item'));
+  });
+
+  $('.journal-modal__bg, .journal-modal__close').on('click', closeModal);
+
+  $(document).on('keydown', function(e){
+    if(e.key === 'Escape' && $modal.hasClass('is-open')){
+      closeModal();
+    }
+  });
+
+  
+});
+
+
+    
+    </script>
+    
+</body>
+</html>

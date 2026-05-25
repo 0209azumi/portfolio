@@ -1,0 +1,189 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+  box-sizing: border-box;
+  
+}
+
+ul,
+ol {
+  list-style: none;
+}
+img{
+    max-width: 100%;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img{
+  display: block;
+}
+
+
+
+
+
+h1{
+    font-size: 23rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    color: white;
+    letter-spacing: 0.1em;
+    text-align: center;
+    line-height: 1.0;
+    margin-top: 100px;
+  }
+
+.sub-title{
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.08em;
+    margin-bottom: 400px;
+
+}
+
+.hero-h1,
+.hero-sub{
+  opacity: 0;
+  transform: translateY(6px);   /* 動きはかなり小さく */
+  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+}
+
+/* 表示用 */
+.hero-h1.is-show,
+.hero-sub.is-show{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.hero-h1{
+  color: rgba(255,255,255,0.7);
+}
+
+.top-image{
+  width: 80%;
+  margin: 0 auto;
+}
+
+.top-text{
+  margin-top: 300px;
+  letter-spacing: 0.2em;
+}
+
+.top-text h2{
+  font-weight: 300;
+  margin-left: 20%;
+  font-size: 2rem;
+  font-weight: 200;
+}
+
+.text-block{
+  line-height: 3.8;
+  margin-top: 100px;
+  margin-left: 38%;
+  font-size: 1.6rem;
+  font-weight: 200;
+}
+
+
+.top-image-flex{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 300px;
+}
+
+.top-image-flex img{
+  width: 35%;
+}
+
+.top-under{
+  width: 80%;
+  margin: 250px auto;
+}
+
+.split-span {
+  color: rgba(255,255,255,0.5);
+    transition: color .4s ease;
+}
+
+.split-span.active {
+  color: #2f2f2f;            /* haku の濃グレー */
+}
+
+
+
+.split-span.active {
+  color: #2f2f2f;
+}
+
+
+/* ----------------------------
+   静かなフェードイン
+---------------------------- */
+
+.fadein {
+  opacity: 0;
+  transform: translateY(20px);  /* ← 動きを小さく */
+  transition: opacity 1.4s ease, transform 1.4s ease;
+  will-change: opacity, transform;
+}
+
+.fadein.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+@media (max-width: 480px) {
+  h1{
+    font-size: 20rem;
+    margin-top: 90px;
+    }
+    .sub-title{
+      margin-bottom: 100px;
+    }
+    .top-text{
+      margin-top: 80px;
+    }
+    
+.top-text h2{
+  margin-left: 10%;
+}
+
+.text-block{
+  line-height: 3.8;
+  margin-top: 35px;
+  margin-left: 15%;
+}
+.top-image-flex{
+  display: block;
+  margin-top: 80px;
+}
+
+.top-image-flex .top-img-left{
+  width: 60%;
+  margin-left: 10%;
+}
+.top-image-flex .top-img-right{
+  width: 60%;
+  margin-left: 30%;
+  margin-top: 50px;
+}
+
+.top-under{
+  width: 80%;
+  margin: 250px auto;
+}
+.top-under{
+  width: 80%;
+  margin: 50px auto 80px;
+}
+
+}

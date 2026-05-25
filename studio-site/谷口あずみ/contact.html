@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>haku.</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Poppins:wght@100;200;300;400&display=swap" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<script src="common.js"></script>
+
+
+</head>
+
+<body>
+    <div class="scroll-progress" aria-hidden="true"></div>
+
+
+ <!-- ここからheader -->
+ <header>
+    <a class="top-logo" href="./index.html">haku.</a> 
+
+    <button class="menu-btn" id="js-menu" aria-label="menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    
+    <nav>
+        <ul class="nav">
+            <li><a href="./about.html">About</a></li>
+        <li><a href="./works.html">Works</a></li>
+        <li><a href="./journal.html">Journal</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+    </ul>
+    </nav>
+</header>
+
+<!-- ここまでheder -->
+<div class="cursor-follow"></div>
+
+<!-- ここからmain -->
+<h1>Contact</h1>
+<h2 class="fadein">静かなデザインのご相談はこちらから</h2>
+<p class="contact-text fadein">haku.のデザインに興味を持っていただき、ありがとうございます。</p>
+
+<p class="contact-text fadein">お仕事のご相談やご質問など、こちらのフォームよりお気軽に
+お送りください。</p>
+
+<p class="contact-text fadein">内容を確認のうえ、数日以内にご連絡いたします。</p>
+
+<form action="#">
+    <div class="contact fadein">
+    <dl>
+        <dt><span>Name</span></dt>
+        <dd><input type="text" name="name" required></dd>
+    </dl>
+    <dl>
+        <dt><span>E-mail</span></dt>
+        <dd><input type="email" name="email" required></dd>
+    </dl>
+    <dl>
+        <dt><span>Subject</span></dt>
+        <dd><input type="text" name="subject"></dd>
+    </dl>
+    <dl>
+        <dt><span>Message</span></dt>
+        <dd><textarea name="message" required></textarea></dd>
+    </dl>
+
+
+<div class="send-wrap">
+  <div class="send-line" aria-hidden="true"></div>
+  <button type="submit">SEND</button>
+<p class="thankyou" aria-live="polite">Thank you for your message.</p>
+
+</div>
+
+</div>
+</form>
+
+<div class="under-send">
+<p>個人情報は、お問い合わせのご返信以外の目的には使用いたしません。</p></div>
+<!-- ここまでmain -->
+<!-- ここからfooter -->
+<footer>
+    <div class="footer-in">
+    <div class="footer-flex">
+    <div class="footer-left">
+    <a href="./about.html">About"haku."<span class="footer-about">haku.について</span></a>
+    <a href="./works.html">Works<span class="footer-works">作品集</span></a>
+    <a href="./journal.html">Journal<span class="footer-journal">日記・コラム</span></a>
+    </div>
+    <div class="footer-right">
+    <a href="./contact.html">Contact<span class="fotter-contact">お問い合わせ</span></a>
+    <a href="#"><span>Privacy policy</span></a>
+    </div>
+</div>
+<div class="footer-logo">
+<a class="footer-title" href="./index.html">haku.</a></div>
+<div class="copyright"> <small>©haku.2025</small></div>
+</div>
+</footer>
+
+<!-- ここまでfooter -->
+<a href="#" class="pagetop" id="js-pagetop">TOP</a>
+
+<script>
+    $(function(){
+  const $btn = $('.send-btn');
+  const $line = $('.send-line');
+  if(!$btn.length) return;
+
+  $btn.on('mouseenter focus', function(){
+    $line.addClass('is-active');
+  });
+
+  $btn.on('mouseleave blur', function(){
+    $line.removeClass('is-active');
+  });
+});
+
+</script> 
+<script>
+    $(function(){
+      const $wrap = $('.contact'); 
+      if(!$wrap.length) return;
+    
+      $wrap.closest('form').on('submit', function(e){
+        e.preventDefault(); 
+        
+        // Thank you 表示 & 触れない状態
+        $wrap.addClass('is-sent');
+    
+        // ボタン文言変更
+        const $btn = $wrap.find('button[type="submit"]');
+        $btn.text('SENT');
+      });
+    });
+    </script>
+    
+
+</body>
+</html>

@@ -1,0 +1,378 @@
+@charset "utf-8";
+
+
+
+h1{
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.08em;
+    font-size: 4rem;
+    text-align: center;
+    padding-top: 300px;
+
+}
+
+h2{
+    font-weight: 300;
+    font-size: 2rem;
+    letter-spacing: 0.2em;
+    padding-top: 500px;
+    text-align: center;
+}
+
+.about-text p{
+    line-height: 5;
+    margin-top: 100px;
+    font-size: 1.6rem;
+    letter-spacing: 0.08em;
+
+}
+
+.about-text-center{
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.about-topimage{
+    width: 70%;
+    margin: 250px auto 300px;
+}
+.about-topimage img{
+    width: 100%;
+}
+.info{
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 5;
+    padding-bottom: 300px;
+    letter-spacing: 0.08em;
+
+}
+
+h3{
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.08em;
+    font-size: 3rem;
+    text-align: center;
+    padding-bottom: 150px;
+
+}
+
+.creators-flex,
+.create-flex{
+  width: min(980px, 84%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: clamp(40px, 9vw, 140px);
+  row-gap: 140px;
+  letter-spacing: 0.1em;
+  line-height: 2.5;
+}
+
+.creators-left,
+.create-left{
+  width: min(420px, 100%);
+  justify-self: end;   /* 左カラムの右寄せ（中央に寄る） */
+  margin: 0;
+}
+
+.creators-right,
+.create-right{
+  width: min(420px, 100%);
+  justify-self: start; /* 右カラムの左寄せ（中央に寄る） */
+  margin: 0;
+}
+
+.creators-flex, .create-flex{ position: relative; z-index: 1; }
+
+.create{
+    margin-top: 250px;
+}
+
+.creators-flex dt,
+.create-flex dt{
+    font-size: 2rem;
+}
+
+.creators-small{
+    font-size: 1rem;
+}
+
+.relate-text{
+    font-size: 1rem;
+}
+
+.create-text{
+    font-size: 1.3rem;
+}
+
+
+  /* ==========================
+   Creators：背景タイポ
+   ========================== */
+   .creators{
+    position: relative;
+  }
+  
+  /* 背景に薄い文字 */
+  .creators::before{
+    content: "CREATORS";
+    position: absolute;
+    top: -60px;            
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    letter-spacing: .28em;
+    font-size: clamp(4rem, 12vw, 9rem);
+    color: #2f2f2f;
+    opacity: .03;            
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  .creators h3{
+    position: relative;
+    z-index: 1;
+  }
+
+
+
+  /* ==========================
+   What we create?：背景タイポ
+   ========================== */
+.create{
+    position: relative;
+  }
+  
+  .create::before{
+    content: "CREATE";
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    letter-spacing: .32em;
+    font-size: clamp(4rem, 12vw, 9rem);
+    color: #2f2f2f;
+    opacity: .03;          
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  .create h3{
+    position: relative;
+    z-index: 1;
+  }
+  
+
+
+
+.contact-button{
+    display: flex;
+    justify-content: flex-end;
+    width: 500px;
+    margin: 0 20% 0 auto;
+    letter-spacing: 0.1em;
+    margin-bottom: 200px;
+    z-index: 250;
+    position: relative;
+}
+
+.contact-button a{
+    border: 0.5px solid #a9b7c0;
+    padding: 3px 50px;
+    transition: all 0.3s;
+}
+
+.contact-button a:hover{
+    background-color: #a9b7c0;
+    color: #e9ecef;
+}
+
+.about-bottom-image{
+    width: 1050px;
+    margin: 0 auto;    
+    position: relative;
+    padding-bottom: 700px;
+}
+.about-bottom-image img{
+    width: 600px;
+}
+
+.top{
+    position: absolute;
+    top: 450px;
+    left: 450px;
+    z-index: 2;
+}
+
+.bottom{
+    position: relative;
+    z-index: 1;
+    margin-top: 120px;
+}
+
+
+  .next-links{
+    width: 60%;
+    margin: 10px auto 260px;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+  }
+  
+  .next-link{
+    flex: 1;
+    padding: 18px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    letter-spacing: 0.12em;
+    position: relative;
+    transition: opacity .35s ease, transform .35s ease;
+  }
+
+  .next-link::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 70%;            
+    height: 0.5px;
+    background: #a9b7c0;
+    opacity: 0.6;
+  }
+  
+  .next-title{
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-size: 1.2rem;
+  }
+  
+  .next-arrow{
+    opacity: 0.6;
+    transition: transform .45s ease, opacity .45s ease;
+    font-size: 0.95em;
+  }
+  
+  .next-link:hover{
+    opacity: 0.85;
+    transform: translateY(-2px);
+  }
+  
+  .next-link:hover .next-arrow{
+    transform: translateX(6px);
+    opacity: 0.9;
+  }
+  
+
+
+
+  @media (max-width: 480px) {
+    h1{
+      padding: 0;
+      margin-top: 130px;
+      font-size: 30px;
+    }
+    h2{
+      padding-top: 100px;
+      font-size: 18px;
+    }
+    .about-text-center p{
+      margin-top: 35px;
+      font-size: 16px;
+      line-height: 2.5;
+
+    }
+    .about-text-center{
+      width: 80%;
+    }
+
+    .about-topimage{
+      width: 90%;
+      margin: 100px auto 100px;
+  }
+
+  .info{
+    text-align: center;
+    font-size: 11px;
+    line-height: 2.5;
+    padding-bottom: 100px;
+    letter-spacing: 0.08em;
+}
+
+.creators-flex br,
+.create-flex br{
+  display: none;
+}
+
+h3{
+  padding-bottom: 60px;
+  font-size: 24px;
+}
+.creators::before{
+  top: -25px;            
+}
+.creators-flex,
+.create-flex{
+display: flex;
+flex-direction: column;
+gap: 50px;
+width: 75%;
+
+}
+
+
+.create::before{
+  top: -25px;
+}
+
+
+.creators-flex dt,
+.create-flex dt{
+    font-size: 20px;
+}
+
+.creators-small{
+    font-size: 12px;
+}
+
+.relate-text{
+    font-size: 16px;
+}
+
+.create-text{
+    font-size: 18px;
+}
+
+.contact-button{
+  margin-top: 80px;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 100px;
+
+}
+
+.contact-button p{
+  font-size: 11px;
+}
+
+.contact-button a{
+  font-size: 11px;
+}
+
+.about-bottom-image,
+.next-links{
+  display: none;
+}
+
+.works-items ul{
+  margin: 0;
+}
+  }

@@ -1,0 +1,227 @@
+h1{
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.08em;
+    font-size: 4rem;
+    text-align: center;
+    padding-top: 300px;
+
+}
+
+h2{
+    font-weight: 300;
+    font-size: 2rem;
+    letter-spacing: 0.2em;
+    padding-top: 500px;
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+.contact-text{
+    line-height: 1;
+    margin-top: 60px;
+    font-size: 1.6rem;
+    letter-spacing: 0.08em;
+    text-align: center;
+    
+}
+
+ form {
+    max-width: 700px;
+    margin:200px auto 50px;
+    padding: 0 20px;
+}
+
+.contact dt {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+    letter-spacing: 0.08em;
+    margin-bottom: 9px; 
+    color: #2f2f2f;
+}
+
+.contact dd {
+    margin-left: 0;
+    margin-bottom: 70px;
+}
+
+/*
+ * 入力欄（Name, E-mail, Subject）の共通スタイル
+ */
+ .contact input[type="text"],
+ .contact input[type="email"] { 
+     width: 100%;
+     padding: 10px 30px; 
+     border: 0.3px solid #a9b7c0; 
+     background-color: #e9ecef; 
+     color: #2f2f2f;
+     font-family: sans-serif;
+     box-sizing: border-box; 
+ }
+ 
+ /* テキストエリア (Message) */
+ .contact textarea {
+     width: 100%;
+     height: 120px; 
+     padding: 10px 30px;
+     border: 0.3px solid #a9b7c0;
+    background-color: #e9ecef;
+     font-size: 1.2rem;
+     color: #333;
+     font-family: sans-serif;
+     box-sizing: border-box;
+     resize: vertical; 
+ }
+ 
+ /* SENDボタン */
+.contact button[type="submit"] {
+    display: block;
+    width: 100%; 
+    margin: 50px auto 0;
+    padding: 10px 0;
+    text-align: center;
+    background-color: #e9ecef; 
+    color: #2f2f2f; 
+    cursor: pointer;
+    border: 0.5px solid #a9b7c0;
+    
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.08em;
+    font-size: 1.2rem;
+
+    transition: background-color 0.5s;
+}
+
+.contact button[type="submit"]:hover {
+    background-color: #a9b7c0; 
+    color: #ffffff;
+}
+
+
+.contact dl dd input,
+textarea {
+  outline: none;
+  box-shadow: none;
+  transition: all 0.3s;
+}
+
+.contact dl dd input:focus,
+textarea:focus {
+  border: 1px solid #a9b7c0; 
+  outline: none;
+  box-shadow: none;
+}
+
+
+.under-send{
+    text-align: center;
+    margin-top: 110px;
+    margin-bottom: 250px;
+}
+
+  .send-wrap{
+    width: 100%;
+    margin-top: 4px; /* textareaとの距離 */
+  }
+  
+  .send-line{
+    width: 120px;
+    height: 1px;
+    margin: 0 auto 10px;
+    background: rgba(169,183,192,.45);
+    opacity: .6;
+    transition: opacity .45s ease, transform .45s ease;
+    transform-origin: center;
+  }
+  
+  .send-line.is-active{
+    opacity: .95;
+    transform: scaleX(1.1);
+  }
+  
+  .send-btn{
+    width: 100%;
+  }
+  
+
+/* Thank you（最初は見せない） */
+.thankyou{
+    margin-top: 40px;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    letter-spacing: .22em;
+    font-size: .9rem;
+    opacity: 0;
+    transform: translateY(6px);
+    transition: opacity .9s ease, transform .9s ease;
+  }
+  
+  .contact.is-sent .thankyou{
+    opacity: .75;
+    transform: translateY(0);
+  }
+  
+  .contact.is-sent dl,
+  .contact.is-sent button{
+    opacity: .45;
+  }
+  
+  .contact.is-sent input,
+  .contact.is-sent textarea,
+  .contact.is-sent button{
+    pointer-events: none;
+  }
+  
+
+  @media (max-width: 480px) {
+    h1{
+      padding: 0;
+      margin-top: 130px;
+      font-size: 30px;
+    }
+    h2{
+      padding-top: 100px;
+      padding-bottom: 50px;
+      font-size: 18px;
+    }
+    .contact-text{
+      font-size: 10px;
+      margin-top: 25px;
+    }
+    form {
+      width: 75%;
+      margin:50px auto 0;
+      padding: 0 20px;
+  }
+  .contact dd {
+    margin-bottom: 30px;
+}
+ .contact input[type="text"],
+ .contact input[type="email"] { 
+     padding: 4px 20px; 
+ }
+ .contact textarea {
+  width: 100%;
+  height: 80px; 
+  padding: 4px 20px;
+ }
+ .contact button[type="submit"] {
+    font-size: 12px;
+    margin-top: 20px;
+  }
+  .contact span{
+    font-size: 12px;
+    }
+  .send-line{
+      display: none;
+    }
+  .under-send{
+      margin-top: 20px;
+      margin-bottom: 70px;
+      font-size: 10px;
+  }
+  
+  }
