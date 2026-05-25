@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>haku.</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/works.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Poppins:wght@100;200;300;400&display=swap" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<script>
+
+$(function() {
+    var menu = $('.nav'),
+    offset = menu.offset();
+    $(window).scroll(function () {
+      if($(window).scrollTop() > offset.top) {
+        menu.addClass('fixed');
+      } else {
+        menu.removeClass('fixed');
+      }
+    });
+  });
+</script>
+
+</head>
+
+<body>
+
+     <!-- ここからheader -->
+     <header>
+        <a class="top-logo" href="./index.html">haku.</a> 
+        <nav>
+            <ul class="nav">
+                <li><a href="./about.html">About</a></li>
+            <li><a href="./works.html">Works</a></li>
+            <li><a href="./journal.html">Journal</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+        </ul>
+        </nav>
+    </header>
+    
+<!-- ここまでheder -->
+<div class="cursor-follow"></div>
+
+<!-- ここからmain -->
+<h1>Works</h1>
+<h2>静けさに宿る、美しい瞬間をかたちに</h2>
+
+<li class="works-items">
+    <ol>
+        <img src="./img/works/project01.jpeg" alt="Silent Window">
+        <dl>
+            <dt>Silent Window</dt>
+            <dd>建築スタジオ「Kaku Architects」<br>
+                Webサイトリニューアル</dd>
+        </dl>
+    </ol>
+    <ol>
+        <img src="./img/works/project02.jpeg" alt="Grey Silence">
+        <dl>
+            <dt>Grey Silence</dt>
+            <dd>アートギャラリー「Locon」<br>
+                展示ビジュアル</dd>
+        </dl>
+    </ol>
+    <ol>
+        <img src="./img/works/project03.jpeg" alt="White noice">
+        <dl>
+            <dt>White noice</dt>
+            <dd>オーディオブランド「murmur audio」<br>
+                特設ページ</dd>
+        </dl>
+    </ol>
+    <ol>
+        <img src="./img/works/project04.jpeg" alt="Muted Materials">
+        <dl>
+            <dt>Muted Materials</dt>
+            <dd>素材ブランド「tone material」<br>
+                質感ビジュアル</dd>
+        </dl>
+    </ol>
+    <ol>
+        <img src="./img/works/project05.jpeg" alt="Silent Plant">
+        <dl>
+            <dt>Silent Plant</dt>
+            <dd>小さな花屋「Michikusa」<br>
+                ビジュアル更新</dd>
+        </dl>
+    </ol>
+    <ol>
+        <img src="./img/works/project06.jpeg" alt="Quiet Objects">
+        <dl>
+            <dt>Quiet Objects</dt>
+            <dd>ミニマル雑貨ブランド「Still life」<br>
+                プロモーションビジュアル</dd>
+        </dl>
+    </ol>
+    <ol>
+        <img src="./img/works/project07.jpeg" alt="Calm Desk">
+        <dl>
+            <dt>Calm Desk</dt>
+            <dd>クリエイター向けツールブランド「toku」<br>
+                紹介サイト</dd>
+        </dl>
+    </ol>
+    <ol>
+        <img src="./img/works/project08.jpeg" alt="Soft Passage">
+        <dl>
+            <dt>Soft Passage</dt>
+            <dd>建築スタジオ「Kinu Studio」<br>
+                空間撮影シリーズ</dd>
+        </dl>
+    </ol>
+    <ol>
+        <img src="./img/works/project09.jpeg" alt="Soft Geometry">
+        <dl>
+            <dt>Soft Geometry</dt>
+            <dd>家具スタジオ「Mori Outline」<br>
+                季節キャンペーンLP</dd>
+        </dl>
+    </ol>
+
+</li>
+
+<!-- ここまでmain -->
+<!-- ここからfooter -->
+<footer>
+    <div class="footer-in">
+    <div class="footer-flex">
+    <div class="footer-left">
+    <a href="./about.html">About"haku."<span class="footer-about">haku.について</span></a>
+    <a href="./works.html">Works<span class="footer-works">作品集</span></a>
+    <a href="./journal.html">Journal<span class="footer-journal">日記・コラム</span></a>
+    </div>
+    <div class="footer-right">
+    <a href="./contact.html">Contact<span class="fotter-contact">お問い合わせ</span></a>
+    <a href="#"><span>Privacy policy</span></a>
+    </div>
+</div>
+<div class="footer-logo">
+<a class="footer-title" href="./index.html">haku.</a></div>
+<div class="copyright"> <small>©haku.2025</small></div>
+</div>
+</footer>
+
+<!-- ここまでfooter -->
+
+    
+</body>
+</html>

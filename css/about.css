@@ -1,0 +1,157 @@
+@charset "utf-8";
+
+
+
+h1{
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.08em;
+    font-size: 4rem;
+    text-align: center;
+    padding-top: 100px;
+
+}
+
+h2{
+    font-weight: 300;
+    font-size: 2rem;
+    letter-spacing: 0.2em;
+    padding-top: 300px;
+    margin-left: 25%;
+
+}
+
+.about-text p{
+    line-height: 5;
+    margin-top: 100px;
+    margin-left: 25%;
+    font-size: 1.6rem;
+    letter-spacing: 0.08em;
+
+}
+
+.about-topimage{
+    width: 80%;
+    margin: 250px auto 300px;
+}
+
+.info{
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 5;
+    padding-bottom: 300px;
+    letter-spacing: 0.08em;
+
+}
+
+h3{
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.08em;
+    font-size: 3rem;
+    text-align: center;
+    padding-bottom: 150px;
+
+}
+
+.creators-flex,
+.create-flex{
+    display: flex;
+    flex-direction: column;
+    gap: 200px;
+    margin-bottom: 250px;
+    letter-spacing: 0.1em;
+    line-height: 2.5;
+
+}
+
+.creators-left,
+.create-left{
+    margin-left: 20%;
+}
+
+.creators-right,
+.create-right{
+   margin-left: 50%;
+}
+
+.creators-flex dt,
+.create-flex dt{
+    font-size: 2rem;
+}
+
+.creators-small{
+    font-size: 1rem;
+}
+
+.relate-text{
+    font-size: 1rem;
+}
+
+.create-text{
+    font-size: 1.3rem;
+}
+
+.contact-button{
+    display: flex;
+    justify-content: flex-end;
+    width: 500px;
+    margin: 0 10% 0 auto;
+    letter-spacing: 0.1em;
+    margin-bottom: 200px;
+    z-index: 250;
+    position: relative;
+}
+
+.contact-button a{
+    border: 0.5px solid #a9b7c0;
+    padding: 3px 50px;
+    margin-left: 10px;
+    transition: all 0.3s;
+}
+
+.contact-button a:hover{
+    background-color: #a9b7c0;
+    color: #e9ecef;
+}
+
+.about-bottom-image{
+    width: 1050px;
+    margin: 0 auto;    
+    position: relative;
+    padding-bottom: 700px;
+}
+.about-bottom-image img{
+    width: 600px;
+}
+
+.top{
+    position: absolute;
+    top: 450px;
+    left: 450px;
+    z-index: 2;
+}
+
+.bottom{
+    position: relative;
+    z-index: 1;
+    margin-top: 120px;
+}
+
+
+/* ----------------------------
+   dl が下からふわっと出てくるアニメーション
+---------------------------- */
+
+.fadein-dl {
+    opacity: 0;
+    transform: translateY(60px);   /* ★ もっと下から出てくる */
+    transition: opacity 0.6s ease, transform 0.6s ease; /* ★ 少し早く */
+    will-change: opacity, transform;
+  }
+  
+  .fadein-dl.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  

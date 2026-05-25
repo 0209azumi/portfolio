@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>haku.</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Poppins:wght@100;200;300;400&display=swap" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<script>
+
+$(function() {
+    var menu = $('.nav'),
+    offset = menu.offset();
+    $(window).scroll(function () {
+      if($(window).scrollTop() > offset.top) {
+        menu.addClass('fixed');
+      } else {
+        menu.removeClass('fixed');
+      }
+      
+    });
+  });
+</script>
+</head>
+<body>
+  
+   <!-- ここからheader -->
+ <header>
+    <a class="top-logo" href="./index.html">haku.</a>
+    <nav>
+    <ul class="nav">
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./works.html">Works</a></li>
+        <li><a href="./journal.html">Journal</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+    </ul>
+    </nav>
+</header>
+<!-- ここまでheder -->
+<div class="cursor-follow"></div>
+
+
+<!-- ここからmain -->
+
+<!-- ここまでmain -->
+
+
+<!-- ここからfooter -->
+<footer>
+    <div class="footer-in">
+    <div class="footer-flex">
+    <div class="footer-left">
+    <a href="./about.html">About"haku."<span class="footer-about">haku.について</span></a>
+    <a href="./works.html">Works<span class="footer-works">作品集</span></a>
+    <a href="./journal.html">Journal<span class="footer-journal">日記・コラム</span></a>
+    </div>
+    <div class="footer-right">
+    <a href="./contact.html">Contact<span class="fotter-contact">お問い合わせ</span></a>
+    <a href="#"><span>Privacy policy</span></a>
+    </div>
+</div>
+<div class="footer-logo">
+    <a class="footer-title" href="./index.html">haku.</a></div>
+   <div class="copyright"> <small>©haku.2025</small></div>
+</div>
+</footer>
+<!-- ここまでfooter -->
+
+  
+</body>
+</html>
+
+

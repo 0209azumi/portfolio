@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>haku.</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/about.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Poppins:wght@100;200;300;400&display=swap" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<script>
+
+$(function() {
+    var menu = $('.nav'),
+    offset = menu.offset();
+    $(window).scroll(function () {
+      if($(window).scrollTop() > offset.top) {
+        menu.addClass('fixed');
+      } else {
+        menu.removeClass('fixed');
+      }
+    });
+  });
+</script>
+
+<script>
+  $(function() {
+  const $cursor = $(".cursor-follow");
+
+  let mouseX = 0, mouseY = 0;
+  let cursorX = 0, cursorY = 0;
+
+  // マウス位置を取得
+  $(window).on("mousemove", function(e) {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  });
+
+  // カーソル本体を少し遅れて追従
+  function animateCursor() {
+    cursorX += (mouseX - cursorX) * 0.15;
+    cursorY += (mouseY - cursorY) * 0.15;
+
+    // ★ マウスから少し離して追従（距離調整できる）
+    const offset = 18; // 10〜35 くらいが上品
+    $cursor.css({
+      top: cursorY + offset + "px",
+      left: cursorX + offset + "px"
+    });
+
+    requestAnimationFrame(animateCursor);
+  }
+  animateCursor();
+
+// ==========================
+// ホバー時のカーソル変化
+// ==========================
+$("a, button, .hover-target").on("mouseenter", function() {
+  $(".cursor-follow").addClass("hover");
+});
+
+$("a, button, .hover-target").on("mouseleave", function() {
+  $(".cursor-follow").removeClass("hover");
+});
+
+// ==========================
+// フッター付近でカーソル色切り替え
+// ==========================
+$(function() {
+  const $cursor = $(".cursor-follow");
+  const $footer = $("footer").first();  // 一番下のフッターを取得
+
+  function toggleCursorColor() {
+    if ($footer.length === 0) return;
+
+    const scrollBottom = $(window).scrollTop() + $(window).height();
+    const footerTop = $footer.offset().top;
+
+    // 画面の下端がフッターの上端を超えたらフッターゾーン
+    if (scrollBottom > footerTop) {
+      $cursor.addClass("footer-zone");
+    } else {
+      $cursor.removeClass("footer-zone");
+    }
+  }
+
+  toggleCursorColor();
+  $(window).on("scroll resize", toggleCursorColor);
+});
+
+});
+
+</script>
+
+  
+  
+
+<script>
+
+    $(function() {
+        var menu = $('.nav'),
+        offset = menu.offset();
+        $(window).scroll(function () {
+          if($(window).scrollTop() > offset.top) {
+            menu.addClass('fixed');
+          } else {
+            menu.removeClass('fixed');
+          }
+        });
+      });
+    
+    /* ★ ここから dl のふわっとアニメーション ★ */
+    $(function () {
+    
+      // Creators と What we create? の dl を全部ターゲットにする
+      var $dls = $('.creators-flex dl, .create-flex dl');
+    
+      // 最初にアニメ用クラスを付けておく
+      $dls.addClass('fadein-dl');
+    
+      function showDl() {
+        var scroll = $(window).scrollTop();
+        var windowHeight = $(window).height();
+    
+        $dls.each(function (i) {
+          var $el = $(this);
+          var elemTop = $el.offset().top;
+    
+          // 画面の 8 割くらい入ったら表示開始
+          if (scroll > elemTop - windowHeight * 0.9) {
+    
+            // すでに表示済みなら何もしない
+            if ($el.hasClass('show')) return;
+    
+            // 少しずつ時間差で出てくる (i * 120ms)
+            setTimeout(function () {
+              $el.addClass('show');
+            }, i * 80);
+          }
+        });
+      }
+    
+      // 読み込み時 & スクロール時にチェック
+      showDl();
+      $(window).on('scroll', showDl);
+    
+    });
+    
+    </script>
+    
+        
+</head>
+
+<body>
+<!-- ここからheader -->
+<header>
+    <a class="top-logo" href="./index.html">haku.</a> 
+    <nav>
+        <ul class="nav">
+            <li><a href="./about.html">About</a></li>
+        <li><a href="./works.html">Works</a></li>
+        <li><a href="./journal.html">Journal</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+    </ul>
+    </nav>
+</header>
+
+
+<!-- ここまでheder -->
+<div class="cursor-follow"></div>
+
+<!-- ここからmain -->
+<h1>About “haku.”</h1>
+<div class="about-text js-split-area">
+<h2>”余白にひそむ、美しさを見つけること”</h2>
+<p>それがhaku.の原点です。</p>
+
+<p>派手さよりも、静けさのなかにこそ豊かさがあると信じています。<br />
+光が壁をすべり、影がそっと形を変える。<br />
+その一瞬を逃さず、デザインとして丁寧に残していきます。</p>
+
+<p>静寂は、最も豊かなデザインだから。</p>
+</div>
+<div class="about-topimage">
+<img src="./img/about/about01.png" alt="スタジオの写真">
+</div>
+<p class="info js-split-area">haku.は、光と静けさを手がかりに、<br />
+    空間、Web、グラフィックを中心としたデザインを行うスタジオです。</p>
+
+    <div class="Creators">
+<h3>Creators</h3>
+<div class="creators-flex">
+<dl class="creators-left">
+    <dt>Aki</dt>
+    <dd class="creators-small">Art Director/ <br>
+        Designer</dd>
+    <dd class="relate-text">光と影のわずかな揺らぎから、ブランドの核心を見つけるアートディレクター。 <br>
+        “何を足すか”ではなく、”何を残すか”を基準に静かなデザインを構築する。 <br>
+        haku.の根幹となるコンセプトメイクを担当。</dd>
+</dl>
+<dl class="creators-right">
+    <dt>Sora</dt>
+    <dd class="creators-small">Photographer/ <br>
+        Visual Curator</dd>
+    <dd class="relate-text">室内に差し込む淡い光を捉えるのが得意なフォトグラファー。<br>
+        コンクリートやテクスチャの持つ静かな美しさを可視化し、<br>
+        haku.のビジュアル世界観をつくり出している。</dd>
+</dl>
+<dl class="creators-left">
+    <dt>Kaito</dt>
+    <dd class="creators-small">Coder/ <br>
+        Motion Designer</dd>
+    <dd class="relate-text">”空気のような動き”をテーマに、小さなアニメーションで <br>
+        世界観を補完するフロントエンド担当。<br>
+        余白を壊さない控えめな動きにこだわり、静けさの中に生きた空気を与える。</dd>
+</dl>
+<dl class="creators-right">
+    <dt>Uta</dt>
+    <dd class="creators-small">Brand Whiter/　<br>
+        Creative Planner</dd>
+    <dd class="relate-text">詩的で透明感のある言葉を扱うライター。<br>
+        haku.の「静寂なデザイン」という思想を言語化し、<br>
+        TopやAboutの文章、コンセプトストーリーを編む役割を担う。</dd>
+</dl>
+</div>
+    </div>
+
+<div class="create">
+<h3>What we create?</h3>
+<div class="create-flex">
+<dl class="create-left">
+    <dt>Web Design</dt>
+    <dd class="create-text">静けさを纏うレイアウト設計。</dd>
+    <dd class="relate-text">余白、光、視線の流れを丁寧に整え、<br>
+        “呼吸できるWebサイト”をデザインします。<br>
+        装飾よりも空気感を大切にしたデザインが得意です。</dd>
+</dl>
+<dl class="create-right">
+    <dt>Branding</dt>
+    <dd class="create-text">世界観と言葉の芯を見つける。</dd>
+    <dd class="relate-text">ブランドの持つ温度、空気感、価値観を拾い集め、<br>
+        必要な要素だけを残して整理します。<br>
+        ロゴ、色、言葉を一貫して調和させます。</dd>
+</dl>
+<dl class="create-left">
+    <dt>Art Direction</dt>
+    <dd class="create-text">光と影が伝えるストーリー。</dd>
+    <dd class="relate-text">ビジュアル撮影、世界観づくり、写真選定を含め、<br>
+        “静けさの美学”を軸にしたアートディレクションを行います。<br>
+        haku.の空気感を保ちながら各ページを構築します。</dd>
+</dl>
+<dl class="create-right">
+    <dt>UI Layout</dt>
+    <dd class="create-text">触れたときの心地よさ。</dd>
+    <dd class="relate-text">小さな動き、押し付けない誘導、<br>
+        ストレスのない情報整理を重視。<br>
+        ユーザーの目線が自然に流れる構造を作ります。</dd>
+</dl>
+<dl class="create-left">
+    <dt>Photography</dt>
+    <dd class="create-text">光の気配を記録する。</dd>
+    <dd class="relate-text">柔らかい光が落ちる瞬間や、影がかすかに揺れる時間など、<br>
+        空間の”静かな変化”を静止画として丁寧に収めます。<br>
+        被写体そのものより、そこに流れる空気を撮る撮影を行います。</dd>
+</dl>
+</div>
+</div>
+
+<div class="contact-button">
+<p>haku.へご相談がある方はこちら→</p>
+<a href="./contact.html">CONTACT</a>
+</div>
+<div class="about-bottom-image">
+<img class="bottom" src="./img/about/about02.png" alt="花の影1">
+<img class="top" src="./img/about/about03.png" alt="花の影2">
+</div>
+<!-- ここまでmain -->
+
+
+<!-- ここからfooter -->
+<footer>
+    <div class="footer-in">
+    <div class="footer-flex">
+    <div class="footer-left">
+    <a href="./about.html">About"haku."<span class="footer-about">haku.について</span></a>
+    <a href="./works.html">Works<span class="footer-works">作品集</span></a>
+    <a href="./journal.html">Journal<span class="footer-journal">日記・コラム</span></a>
+    </div>
+    <div class="footer-right">
+    <a href="./contact.html">Contact<span class="fotter-contact">お問い合わせ</span></a>
+    <a href="#"><span>Privacy policy</span></a>
+    </div>
+</div>
+<div class="footer-logo">
+<a class="footer-title" href="./index.html">haku.</a></div>
+<div class="copyright"> <small>©haku.2025</small></div>
+</div>
+</footer>
+<!-- ここまでfooter -->
+    
+</body>
+</html>

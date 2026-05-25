@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+h1{
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.08em;
+    font-size: 4rem;
+    text-align: center;
+    padding-top: 100px;
+
+}
+
+h2{
+    font-weight: 300;
+    font-size: 2rem;
+    letter-spacing: 0.2em;
+    padding-top: 300px;
+    padding-bottom: 200px;
+    margin-left: 25%;
+
+}
+
+.works-items{  
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 200px 100px;
+    margin: 0 auto;
+    width: 1200px;
+    letter-spacing: 0.08em;
+    margin-bottom: 300px;
+}
+
+.works-items ol dl dt{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+dd{
+    line-height: 2;
+}
