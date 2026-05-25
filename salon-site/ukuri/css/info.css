@@ -1,0 +1,98 @@
+@charset "utf-8";
+
+main{
+  padding: 270px 0 220px;
+  text-align: center;
+}
+
+main h2{
+  margin: 0;
+  font-family: "Noto Serif JP", serif;
+  font-weight: 300;
+  font-size: 1.7rem;
+  letter-spacing: 0.35em;
+}
+
+main dl{
+  margin: 90px auto 120px;
+  width: 420px;
+}
+
+main dt{
+  font-size: 1.3rem;
+  letter-spacing: 0.12em;
+  font-weight: 300;
+}
+
+main dd{
+  margin: 20px 0 50px;
+  font-size: 1.2rem;
+  letter-spacing: 0.08em;
+}
+
+main dl::after{
+    content:"";
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%); 
+    display: block;
+    width: 700px;
+    max-width: 92vw;
+    height: 1px;
+    margin: 80px 0 0;
+    background: rgba(205, 173, 133, 0.5);
+  }
+  
+main .set{
+  width: min(620px, 92%);
+  margin: 0 auto 140px;
+}
+
+main .set img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+main h3{
+  margin: 0;
+  font-weight: 300;
+  font-size: 1.4rem;
+  letter-spacing: 0.14em;
+}
+
+main h3::before{
+  content:"";
+  display:block;
+  width: 640px;
+  max-width: 92vw;
+  height: 1px;
+  margin: 0 auto 70px;
+  background: rgba(205, 173, 133, 0.5);
+}
+
+main h3 + p{
+  margin: 80px auto 140px;
+  width: 520px;
+  max-width: 92%;
+  font-size: 1rem;
+  letter-spacing: 0.06em;
+  line-height: 3.0;
+}
+
+main p:last-of-type{
+  margin-bottom: 0;
+}
+
+main p span{
+  display: inline-block;
+  font-size: 1.2rem;
+  letter-spacing: 0.12em;
+}
+
+
+body{
+  background-image: url(../img/back3.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}

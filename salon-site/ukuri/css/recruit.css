@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+main{
+  padding: 270px 0 180px;
+  text-align: center;
+}
+
+main h2{
+  margin: 0 0 110px;
+  font-family: "Noto Serif JP", serif;
+  font-weight: 300;
+  font-size: 1.7rem;
+  letter-spacing: 0.35em;
+}
+
+main h3{
+  margin: 0 auto 110px;
+  width: min(860px, 92%);
+  font-weight: 300;
+  font-size: 1.2rem;
+  letter-spacing: 0.14em;
+  line-height: 2.6;
+}
+
+main > h3::after{
+    content:"";
+    display:block;
+    width: 700px;
+    height: 1px;
+    margin: 150px auto 0;
+    background: rgba(205, 173, 133, 0.5);
+  }
+
+
+main h3 + p{
+  margin: 0 auto 110px;
+  width: min(760px, 92%);
+  font-size: 1.1rem;
+  letter-spacing: 0.10em;
+  line-height: 3.2;
+}
+
+
+.rec-img{
+  width: min(740px, 92%);
+  margin: 0 auto 110px;
+}
+
+.rec-img img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+main .rec-img + p{
+  margin: 0 auto;
+  width: min(860px, 92%);
+  font-size: 1.05rem;
+  letter-spacing: 0.10em;
+  line-height: 2.8;
+}
+
+
+body{
+  background-image: url(../img/back6.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}

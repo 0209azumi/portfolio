@@ -1,0 +1,151 @@
+@charset "utf-8";
+
+.fv{
+    position: relative;
+  }
+  
+  
+  .fv .site-header{
+    width: 100%;
+    z-index: 10;
+    background: transparent;
+    position: fixed;
+    top: 0;
+  }
+
+  
+  .fv-img{
+    width: 100%;
+    display: block;
+  }
+
+
+
+.scroll-indicator{
+  position: relative;
+  width: 24px;
+  height: 180px;
+  margin: 80px auto 200px;
+}
+
+
+/* 縦線 */
+.scroll-indicator::before{
+  content:"";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 180px;
+  background: rgba(90, 78, 69, 0.3);
+}
+
+/* 動くドット */
+.scroll-indicator::after{
+  content:"";
+  position: absolute;
+  top: 38px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  background: rgba(90, 78, 69, 0.7);
+  border-radius: 50%;
+  animation: scrollDot 3.5s ease-in-out infinite;
+}
+
+/* ドットが線の上を流れる */
+@keyframes scrollDot{
+  0%{
+    top: 10px;
+    opacity: 0;
+  }
+  30%{
+    opacity: 1;
+  }
+  70%{
+    opacity: 1;
+  }
+  100%{
+    top: 160px;
+    opacity: 0;
+  }
+}
+
+.scroll-indicator span{
+  display: none;
+}
+
+
+main{
+  padding: 150px 0 150px;
+  text-align: center;
+}
+
+main h2{
+  font-family: "Noto Serif JP", serif;
+  font-weight: 300;
+  font-size: 1.7rem;
+  letter-spacing: 0.35em;
+}
+
+main h2:first-of-type{
+  margin-bottom: 60px;
+}
+
+main h2:nth-of-type(2){
+  margin-top: 250px;
+  padding-bottom: 5px;
+  margin-bottom: 75px;
+  position: relative;
+}
+
+main h2:nth-of-type(2)::after{
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 700px;
+  height: 1px;
+  background: rgba(90, 78, 69, 0.28);
+}
+
+main h2:first-of-type + p{
+  max-width: 92%;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  line-height: 4.5;
+  letter-spacing: 0.06em;
+}
+
+main h2:nth-of-type(2) ~ p{
+  width: 420px;
+  max-width: 92%;
+  margin: 0 auto;
+  padding: 8px 0;
+  margin-bottom: 50px;
+  border-bottom: 0.3px solid #CEAD85;
+  display: flex;
+  justify-content: flex-start;
+  font-size: 1rem;
+  letter-spacing: 0.06em;
+}
+
+main h2:nth-of-type(2) ~ p span{
+  width: 130px;      
+  text-align: right; 
+  margin-right: 50px; 
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+}
+
+
+
+body{
+  background-image: url(../img/back.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}

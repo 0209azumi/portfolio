@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+main{
+  padding: 270px 0 220px;
+  text-align: center;
+}
+
+main h2{
+  margin: 0 0 100px;
+  font-family: "Noto Serif JP", serif;
+  font-weight: 300;
+  font-size: 1.7rem;
+  letter-spacing: 0.35em;
+}
+
+main > p{
+  text-align: center;
+  margin: 0 auto 150px;
+  font-size: 1.2rem;
+  letter-spacing: 0.06em;
+}
+
+main > p::after{
+  content:"";
+  display:block;
+  width: 700px;
+  height: 1px;
+  margin: 100px auto 0;
+  background: rgba(205, 173, 133, 0.5);
+}
+
+
+.grid{
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  width: min(1000px, 92%);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 100px 100px;}
+
+
+
+  body{
+    background-image: url(../img/back4.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
